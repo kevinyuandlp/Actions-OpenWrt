@@ -52,15 +52,15 @@ jobs:
         sudo -E apt-get -qq clean
         curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh | sudo bash
         sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
+        sudo mkdir -p /workdir-hanwckf
+        sudo chown $USER:$GROUPS /workdir-hanwckf
 
     - name: Clone source code
-      working-directory: /workdir
+      working-directory: /workdir-hanwckf
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        ln -sf /workdir-hanwckf/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
       run: |
