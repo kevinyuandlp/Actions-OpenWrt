@@ -53,6 +53,7 @@ jobs:
         curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh | sudo bash
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir-hanwckf
+        sudo rm -rf tmp/
         sudo chown $USER:$GROUPS /workdir-hanwckf
 
     - name: Clone source code
