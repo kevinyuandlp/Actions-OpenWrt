@@ -16,4 +16,4 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-echo 'git clone https://git01.mediatek.com/openwrt/feeds/mtk-openwrt-feeds' >> feeds.conf.default
+echo 'src-git master https://git01.mediatek.com/openwrt/feeds/mtk-openwrt-feeds' >> feeds.conf.default
